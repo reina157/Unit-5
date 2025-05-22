@@ -1,6 +1,6 @@
-void mouseReleased() {
+ void mouseReleased() {
   if (mode == INTRO) {
-introClicks();
+  introClicks();
   } else if (mode == GAME) {
     gameClicks();
   } else if (mode == PAUSE) {

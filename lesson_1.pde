@@ -10,6 +10,8 @@ final int GAMEOVER=4;
 void setup(){
   size(800, 600);
   mode = INTRO;
+  textAlign(CENTER,CENTER);
+  rectMode(CENTER);
 }
 
 void draw() {
