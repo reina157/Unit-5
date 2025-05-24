@@ -1,4 +1,8 @@
 void intro() {
+  
+  theme.rewind();
+  theme.play();
+  
   background(118,163,170);
   
   tactile(400,400,200,100);

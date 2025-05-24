@@ -1,7 +1,10 @@
 void gameover () {
-  background(124,27,27);
+  background(225,225,225);
+  theme.pause();
+  gameover.play();
 }
 
 void gameoverClicks() {
-  mode = GAMEOVER;
+  mode = INTRO;
+  theme.rewind();
 }
