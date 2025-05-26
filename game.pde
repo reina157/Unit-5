@@ -1,9 +1,22 @@
 void game () {
   background(174,214,213);
   
+  //pause button
+  fill(225);
+  strokeWeight(2);
+  tactile(750,50,70);
+  ellipse(750,50,70,70);
+  textSize(20);
+  fill(0);
+  text("Pause",750,50);
+
+ textSize(30);
+  strokeWeight(7);
+  
+  
   //score
-  text("SCORE:" +score,width/8,50);
-  text("LIVES:" +lives,width/8,100);
+  text("SCORE: " +score,width/8,50);
+  text("LIVES: " +lives,width/8,100);
   
   
   //target
@@ -35,10 +48,25 @@ void gameClicks() {
     score = score +1;
     bump.rewind();
     bump.play();
-  }else {
+  }else if(dist(mouseX,mouseY,750,50)<50){
+    mode = PAUSE;
+  } else {
     lives=lives-1;
     if (lives == 0) mode = GAMEOVER;
     gameover.rewind();
     gameover.play();
+  }
+}
+
+
+
+
+
+
+void tactile(int x, int y, int r){
+  if(dist(mouseX,mouseY,750,50)<50){
+    stroke(255);
+  }else {
+    stroke(0);
   }
 }
