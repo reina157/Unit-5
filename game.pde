@@ -1,6 +1,8 @@
 void game () {
   background(174,214,213);
-  
+  theme.play();
+    
+    
   //pause button
   fill(225);
   strokeWeight(2);
@@ -46,6 +48,8 @@ void game () {
 void gameClicks() {
   if(dist(mouseX,mouseY,x,y)<50) {
     score = score +1;
+    vx= vx *1.1;
+    vy= vy*1.1;
     bump.rewind();
     bump.play();
   }else if(dist(mouseX,mouseY,750,50)<50){
