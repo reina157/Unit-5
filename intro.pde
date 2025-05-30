@@ -10,7 +10,7 @@ void intro() {
 
   tactile(300, 400, 200, 100);
   rect(300, 400, 200, 100);
-  // options
+  // options button
   tactile(600,400,200,100);
   rect(600, 400, 200, 100);
   
