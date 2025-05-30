@@ -24,7 +24,15 @@ void game () {
   //target
   fill(167,125,73);
   stroke(0);
-  circle(x,y,d);
+  if(pandaOn == true){
+  image(panda,x,y,d,d);
+  } 
+  if(spongebobOn == true) {
+    image(spongebob,x,y,d,d);
+  }
+  if(mickeymouseOn == true) {
+    image(mickeymouse,x,y,d,d);
+  } 
   
   //move 
   x= x+ vx;
@@ -40,10 +48,9 @@ void game () {
     
   }
   
- 
-  
-  
 }
+
+
 
 void gameClicks() {
   if(dist(mouseX,mouseY,x,y)<50) {
