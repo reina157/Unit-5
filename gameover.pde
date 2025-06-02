@@ -3,9 +3,10 @@ void gameover () {
   theme.pause();
   gameover.play();
   text("GAME OVER",400,300);
- // if(score> highscore){
-  //highscore = score; 
- // }
+  if(score> highscore){
+  highscore = score; 
+ }
+ text("HIGHSCORE: "+highscore,400,400,250,100);
 }
  
 void gameoverClicks() {

@@ -1,4 +1,7 @@
 void options() {
+  imageMode(CENTER);
+    
+    
   background(225);
   theme.play();
   strokeWeight(30);
@@ -19,12 +22,28 @@ void options() {
   d= map(sliderX, 550, 750, 50, 200);
 
   //image in box
-  image(mickeymouse, 40, 170, 175, 175);
-  image(spongebob, 300, 170, 175, 175);
-  image(panda, 600, 170, 175, 175);
+  image(mickeymouse, 100, 250, 175, 175);
+  image(spongebob, 390, 250, 175, 175);
+  image(panda, 670, 250, 175, 175);
 
 // indicator image
- 
+
+
+  if (pandaOn == true) {
+    image(panda, 280,470,d,d);
+    spongebobOn=false;
+    mickeymouseOn=false;
+  }
+  if (spongebobOn == true) {
+    image(spongebob, 280, 470, d, d);
+    pandaOn=false;
+    mickeymouseOn=false;
+  }
+  if (mickeymouseOn == true) {
+    image(mickeymouse, 280, 470, d, d);
+    spongebobOn=false;
+    pandaOn=false;
+  }
 
   //slider
   line(750, 500, 550, 500);
@@ -52,28 +71,6 @@ void optionsClicks() {
     mickeymouseOn=false;
     spongebobOn=false;
   }
-  
-  // indicator
-  if (pandaOn == true) {
-    image(panda, 100,400, d, d);
-    spongebobOn=false;
-    mickeymouseOn=false;
-  }
-  if (spongebobOn == true) {
-    image(spongebob, 100, 400, d, d);
-    pandaOn=false;
-    mickeymouseOn=false;
-  }
-  if (mickeymouseOn == true) {
-    image(mickeymouse, 100, 400, d, d);
-    spongebobOn=false;
-    pandaOn=false;
-  }
-  
-  
-  
-  
-  
   
   
 }
